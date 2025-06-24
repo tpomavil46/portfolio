@@ -18,7 +18,7 @@ $(document).ready(function() {
 	});
 
 	var typed = new Typed(".typed", {
-		strings: ["Software Engineer", "Chemical Engineer", "DevOps Engineer", "Data Engineer"],
+		strings: ["Software Engineer", "Solution Architect", "Chemical Engineer", "DevOps Engineer", "Data Engineer"],
 		typeSpeed: 70,
 		loop: true,
 		startDelay: 1000,
