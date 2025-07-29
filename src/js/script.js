@@ -85,7 +85,84 @@ $(document).ready(function() {
     });
 
 
-	$("[data-fancybox]").fancybox();
+	$("[data-fancybox]").fancybox({
+		// Enhanced configuration for better video support
+		buttons: [
+			"zoom",
+			"slideShow",
+			"fullScreen",
+			"thumbs",
+			"close"
+		],
+		// Video specific settings
+		video: {
+			autoplay: false,
+			tpl: '<video class="fancybox-video" controls preload="metadata">' +
+				  '<source src="{src}" type="video/mp4" />' +
+				  'Your browser does not support the video tag.' +
+				  '</video>'
+		},
+		// Mobile optimization
+		mobile: {
+			clickContent: "close",
+			clickSlide: "close"
+		},
+		// Better handling for large files
+		beforeLoad: function(instance, current) {
+			// Check if this is a video link
+			if (current.src && current.src.match(/\.(mp4|webm|ogg)$/i)) {
+				// For large files, we'll handle them differently
+				var fileSize = 0;
+				// We'll use a timeout to handle large files
+				setTimeout(function() {
+					if (fileSize > 100 * 1024 * 1024) { // 100MB threshold
+						// Open in new tab for very large files
+						window.open(current.src, '_blank');
+						instance.close();
+					}
+				}, 1000);
+			}
+		},
+		// Error handling
+		onError: function(instance, current) {
+			// If video fails to load in lightbox, open in new tab
+			if (current.src && current.src.match(/\.(mp4|webm|ogg)$/i)) {
+				window.open(current.src, '_blank');
+				instance.close();
+			}
+		}
+	});
+
+	// Handle video download functionality
+	$(".downloadVideo").click(function(e) {
+		e.preventDefault();
+		var videoUrl = $(this).attr("href");
+		var videoName = videoUrl.split('/').pop();
+		
+		// Create a temporary link to trigger download
+		var link = document.createElement('a');
+		link.href = videoUrl;
+		link.download = videoName;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	});
+
+	// Enhanced video click handler - now opens in new tab
+	$(".openVideo").click(function(e) {
+		var $this = $(this);
+		var videoUrl = $this.attr("href");
+		
+		// Show loading indicator briefly
+		$this.find("i").removeClass("fa-play").addClass("fa-spinner fa-spin");
+		
+		// Reset icon after a short delay
+		setTimeout(function() {
+			$this.find("i").removeClass("fa-spinner fa-spin").addClass("fa-play");
+		}, 1000);
+		
+		// Video will open in new tab automatically due to target="_blank"
+	});
 
 
 	$(".items").isotope({

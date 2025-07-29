@@ -369,6 +369,245 @@ body {
 	background: url(../img/loader.gif) center center no-repeat;
 }
 
+/* Video-specific styles */
+.items .openVideo {
+	float: left;
+	left: -200px;
+}
+
+.items .downloadVideo {
+	float: right;
+	right: -200px;
+}
+
+.items .item:hover .openVideo {
+	left: 0px;
+}
+
+.items .item:hover .downloadVideo {
+	right: 0px;
+}
+
+/* Video player styling */
+.fancybox-video {
+	max-width: 100%;
+	max-height: 80vh;
+	width: auto;
+	height: auto;
+}
+
+/* Loading spinner for video buttons */
+.fa-spinner {
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Demo section specific styling */
+.items .demos .item {
+	position: relative;
+	overflow: hidden;
+}
+
+.items .demos .icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.items .demos .item:hover .icons {
+	opacity: 1;
+}
+
+/* Video thumbnail styling */
+.items .demos img {
+	transition: transform 0.3s ease;
+}
+
+.items .demos .item:hover img {
+	transform: scale(1.05);
+}
+
+/* Diary Sections Styling */
+.diary-content {
+	padding: 20px 0;
+}
+
+.diary-content h3 {
+	color: #333;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.diary-content p {
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.diary-topics {
+	background-color: #f8f9fa;
+	padding: 25px;
+	border-radius: 8px;
+	margin: 20px 0;
+	border-left: 4px solid #007bff;
+}
+
+.diary-topics h4 {
+	color: #333;
+	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.diary-topics ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.diary-topics li {
+	padding: 8px 0;
+	border-bottom: 1px solid #e9ecef;
+	color: #555;
+}
+
+.diary-topics li:last-child {
+	border-bottom: none;
+}
+
+.diary-topics strong {
+	color: #007bff;
+	font-weight: 600;
+}
+
+.video-placeholder {
+	background-color: #e3f2fd;
+	padding: 25px;
+	border-radius: 8px;
+	margin: 20px 0;
+	border-left: 4px solid #2196f3;
+	text-align: center;
+}
+
+.video-placeholder h4 {
+	color: #1976d2;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.video-placeholder p {
+	color: #424242;
+	margin: 0;
+}
+
+/* Books Section Styling */
+.books-content {
+	padding: 20px 0;
+}
+
+.books-content h3 {
+	color: #333;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.books-content p {
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+
+.books-by-year {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	margin: 30px 0;
+}
+
+.year-section {
+	background-color: #f8f9fa;
+	padding: 25px;
+	border-radius: 8px;
+	border-left: 4px solid #28a745;
+}
+
+.year-section h4 {
+	color: #28a745;
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.book-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.book-list li {
+	padding: 10px 0;
+	border-bottom: 1px solid #e9ecef;
+	color: #555;
+	line-height: 1.4;
+}
+
+.book-list li:last-child {
+	border-bottom: none;
+}
+
+.book-list em {
+	color: #999;
+	font-style: italic;
+}
+
+.reading-stats {
+	background-color: #fff3cd;
+	padding: 25px;
+	border-radius: 8px;
+	margin: 30px 0;
+	border-left: 4px solid #ffc107;
+	text-align: center;
+}
+
+.reading-stats h4 {
+	color: #856404;
+	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.reading-stats p {
+	color: #856404;
+	margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.books-by-year {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	
+	.diary-topics,
+	.video-placeholder,
+	.year-section,
+	.reading-stats {
+		padding: 20px;
+	}
+}
+
 
 
 
