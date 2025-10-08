@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apache Spark Video Library - Tim Pomaville</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.video-library {
+			padding: 80px 0;
+			background: #f8f9fa;
+		}
+		.video-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+		.video-card {
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		.video-card:hover {
+			transform: translateY(-5px);
+		}
+		.video-thumbnail {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.video-info {
+			padding: 20px;
+		}
+		.video-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.video-description {
+			color: #666;
+			margin-bottom: 15px;
+			line-height: 1.5;
+		}
+		.video-actions {
+			display: flex;
+			gap: 10px;
+		}
+		.btn-video {
+			padding: 8px 16px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+		.btn-watch {
+			background: #007bff;
+			color: white;
+		}
+		.btn-watch:hover {
+			background: #0056b3;
+			color: white;
+		}
+		.btn-download {
+			background: #28a745;
+			color: white;
+		}
+		.btn-download:hover {
+			background: #1e7e34;
+			color: white;
+		}
+		.back-link {
+			display: inline-block;
+			margin-bottom: 30px;
+			color: #007bff;
+			text-decoration: none;
+		}
+		.back-link:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Tim Pomaville</a>
+			<a href="index.html" class="back-link">
+				<i class="fas fa-arrow-left"></i> Back to Portfolio
+			</a>
+		</div>
+	</nav>
+
+	<div class="video-library">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center mb-4">Apache Spark Video Library</h1>
+					<p class="text-center mb-5">Master Apache Spark with this comprehensive video series covering core concepts, RDDs, DataFrames, and Spark SQL.</p>
+				</div>
+			</div>
+
+			<div class="video-grid">
+				<div class="video-card">
+					<img src="videos/thumbnails/apache-spark-thumb.jpg" alt="Apache Spark Basics" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Apache Spark Basics</div>
+						<div class="video-description">Introduction to Spark architecture, RDDs, and core concepts.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/02-apache-spark-basics.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/02-apache-spark-basics.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/spark-rdds-thumb.jpg" alt="Spark RDDs" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Spark RDDs</div>
+						<div class="video-description">Resilient Distributed Datasets, transformations, and actions.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/07-spark-rdds.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/07-spark-rdds.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/spark-dataframes-thumb.jpg" alt="Spark DataFrames" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Spark DataFrames</div>
+						<div class="video-description">Working with DataFrames, schema, and DataFrame operations.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/08-spark-dataframes.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/08-spark-dataframes.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/spark-sql-thumb.jpg" alt="Spark SQL" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Spark SQL</div>
+						<div class="video-description">SQL queries, temporary views, and Spark SQL optimization.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/09-spark-sql.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/09-spark-sql.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/spark-streaming-thumb.jpg" alt="Spark Streaming" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Spark Streaming</div>
+						<div class="video-description">Real-time data processing with Spark Streaming.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/10-spark-streaming.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/10-spark-streaming.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/spark-performance-thumb.jpg" alt="Spark Performance" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Spark Performance</div>
+						<div class="video-description">Performance tuning, optimization, and best practices.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/11-spark-performance.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/11-spark-performance.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html> 

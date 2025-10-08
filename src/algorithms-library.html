@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithms Video Library - Tim Pomaville</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.video-library {
+			padding: 80px 0;
+			background: #f8f9fa;
+		}
+		.video-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+		.video-card {
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		.video-card:hover {
+			transform: translateY(-5px);
+		}
+		.video-thumbnail {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.video-info {
+			padding: 20px;
+		}
+		.video-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.video-description {
+			color: #666;
+			margin-bottom: 15px;
+			line-height: 1.5;
+		}
+		.video-actions {
+			display: flex;
+			gap: 10px;
+		}
+		.btn-video {
+			padding: 8px 16px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+		.btn-watch {
+			background: #007bff;
+			color: white;
+		}
+		.btn-watch:hover {
+			background: #0056b3;
+			color: white;
+		}
+		.btn-download {
+			background: #28a745;
+			color: white;
+		}
+		.btn-download:hover {
+			background: #1e7e34;
+			color: white;
+		}
+		.back-link {
+			display: inline-block;
+			margin-bottom: 30px;
+			color: #007bff;
+			text-decoration: none;
+		}
+		.back-link:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Tim Pomaville</a>
+			<a href="index.html" class="back-link">
+				<i class="fas fa-arrow-left"></i> Back to Portfolio
+			</a>
+		</div>
+	</nav>
+
+	<div class="video-library">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center mb-4">Algorithms Video Library</h1>
+					<p class="text-center mb-5">Master fundamental algorithms and data structures with this comprehensive video series based on CLRS.</p>
+				</div>
+			</div>
+
+			<div class="video-grid">
+				<div class="video-card">
+					<img src="videos/thumbnails/sorting-algorithms-thumb.jpg" alt="Sorting Algorithms" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Sorting Algorithms</div>
+						<div class="video-description">Bubble sort, merge sort, quick sort, and heap sort implementations.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/13-sorting-algorithms.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/13-sorting-algorithms.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/searching-algorithms-thumb.jpg" alt="Searching Algorithms" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Searching Algorithms</div>
+						<div class="video-description">Linear search, binary search, and advanced search techniques.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/14-searching-algorithms.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/14-searching-algorithms.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/tree-algorithms-thumb.jpg" alt="Tree Algorithms" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Tree Algorithms</div>
+						<div class="video-description">Binary trees, BST operations, and tree traversal algorithms.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/15-tree-algorithms.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/15-tree-algorithms.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/graph-algorithms-thumb.jpg" alt="Graph Algorithms" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Graph Algorithms</div>
+						<div class="video-description">BFS, DFS, shortest path, and minimum spanning tree algorithms.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/16-graph-algorithms.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/16-graph-algorithms.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/dynamic-programming-thumb.jpg" alt="Dynamic Programming" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Dynamic Programming</div>
+						<div class="video-description">Memoization, tabulation, and classic DP problems.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/17-dynamic-programming.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/17-dynamic-programming.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/quantum-algorithms-thumb.jpg" alt="Quantum Algorithms" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Quantum Algorithms</div>
+						<div class="video-description">Introduction to quantum computing and quantum algorithms.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/18-quantum-algorithms.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/18-quantum-algorithms.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html> 

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Design Patterns Video Library - Tim Pomaville</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.video-library {
+			padding: 80px 0;
+			background: #f8f9fa;
+		}
+		.video-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+		.video-card {
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		.video-card:hover {
+			transform: translateY(-5px);
+		}
+		.video-thumbnail {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.video-info {
+			padding: 20px;
+		}
+		.video-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.video-description {
+			color: #666;
+			margin-bottom: 15px;
+			line-height: 1.5;
+		}
+		.video-actions {
+			display: flex;
+			gap: 10px;
+		}
+		.btn-video {
+			padding: 8px 16px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+		.btn-watch {
+			background: #007bff;
+			color: white;
+		}
+		.btn-watch:hover {
+			background: #0056b3;
+			color: white;
+		}
+		.btn-download {
+			background: #28a745;
+			color: white;
+		}
+		.btn-download:hover {
+			background: #1e7e34;
+			color: white;
+		}
+		.back-link {
+			display: inline-block;
+			margin-bottom: 30px;
+			color: #007bff;
+			text-decoration: none;
+		}
+		.back-link:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Tim Pomaville</a>
+			<a href="index.html" class="back-link">
+				<i class="fas fa-arrow-left"></i> Back to Portfolio
+			</a>
+		</div>
+	</nav>
+
+	<div class="video-library">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center mb-4">Design Patterns Video Library</h1>
+					<p class="text-center mb-5">Master software design patterns with this comprehensive video series covering creational, structural, and behavioral patterns.</p>
+				</div>
+			</div>
+
+			<div class="video-grid">
+				<div class="video-card">
+					<img src="videos/thumbnails/design-patterns-thumb.jpg" alt="Design Patterns Introduction" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Design Patterns Introduction</div>
+						<div class="video-description">Overview of design patterns and their importance in software development.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/19-design-patterns-intro.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/19-design-patterns-intro.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/creational-patterns-thumb.jpg" alt="Creational Patterns" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Creational Patterns</div>
+						<div class="video-description">Singleton, Factory, Builder, and Abstract Factory patterns.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/20-creational-patterns.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/20-creational-patterns.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/structural-patterns-thumb.jpg" alt="Structural Patterns" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Structural Patterns</div>
+						<div class="video-description">Adapter, Bridge, Composite, and Decorator patterns.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/21-structural-patterns.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/21-structural-patterns.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/behavioral-patterns-thumb.jpg" alt="Behavioral Patterns" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Behavioral Patterns</div>
+						<div class="video-description">Observer, Strategy, Command, and State patterns.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/22-behavioral-patterns.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/22-behavioral-patterns.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/solid-principles-thumb.jpg" alt="SOLID Principles" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">SOLID Principles</div>
+						<div class="video-description">Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/23-solid-principles.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/23-solid-principles.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/pattern-implementation-thumb.jpg" alt="Pattern Implementation" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Pattern Implementation</div>
+						<div class="video-description">Real-world examples and practical implementation of design patterns.</div>
+						<div class="video-actions">
+							<a href="videos/python-diary/24-pattern-implementation.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/python-diary/24-pattern-implementation.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html> 

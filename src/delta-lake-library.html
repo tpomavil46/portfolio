@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delta Lake Video Library - Tim Pomaville</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.video-library {
+			padding: 80px 0;
+			background: #f8f9fa;
+		}
+		.video-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+		.video-card {
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		.video-card:hover {
+			transform: translateY(-5px);
+		}
+		.video-thumbnail {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.video-info {
+			padding: 20px;
+		}
+		.video-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.video-description {
+			color: #666;
+			margin-bottom: 15px;
+			line-height: 1.5;
+		}
+		.video-actions {
+			display: flex;
+			gap: 10px;
+		}
+		.btn-video {
+			padding: 8px 16px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+		.btn-watch {
+			background: #007bff;
+			color: white;
+		}
+		.btn-watch:hover {
+			background: #0056b3;
+			color: white;
+		}
+		.btn-download {
+			background: #28a745;
+			color: white;
+		}
+		.btn-download:hover {
+			background: #1e7e34;
+			color: white;
+		}
+		.back-link {
+			display: inline-block;
+			margin-bottom: 30px;
+			color: #007bff;
+			text-decoration: none;
+		}
+		.back-link:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Tim Pomaville</a>
+			<a href="index.html" class="back-link">
+				<i class="fas fa-arrow-left"></i> Back to Portfolio
+			</a>
+		</div>
+	</nav>
+
+	<div class="video-library">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center mb-4">Delta Lake Video Library</h1>
+					<p class="text-center mb-5">Master Delta Lake with this comprehensive video series covering ACID transactions, schema evolution, and data lakehouse concepts.</p>
+				</div>
+			</div>
+
+			<div class="video-grid">
+				<div class="video-card">
+					<img src="videos/thumbnails/delta-lake-thumb.jpg" alt="Delta Lake Overview" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Delta Lake Overview</div>
+						<div class="video-description">Introduction to Delta Lake, ACID transactions, and data lakehouse architecture.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/03-delta-lake-overview.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/03-delta-lake-overview.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/delta-writes-thumb.jpg" alt="Delta Lake Writes" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Delta Lake Writes</div>
+						<div class="video-description">Writing data to Delta tables, upserts, and merge operations.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/12-delta-writes.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/12-delta-writes.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/delta-reads-thumb.jpg" alt="Delta Lake Reads" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Delta Lake Reads</div>
+						<div class="video-description">Reading from Delta tables, time travel, and versioning.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/13-delta-reads.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/13-delta-reads.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/delta-schema-thumb.jpg" alt="Delta Schema Evolution" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Delta Schema Evolution</div>
+						<div class="video-description">Schema evolution, column mapping, and schema enforcement.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/14-delta-schema.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/14-delta-schema.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/delta-optimization-thumb.jpg" alt="Delta Optimization" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Delta Optimization</div>
+						<div class="video-description">Z-ORDER, data skipping, and performance optimization techniques.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/15-delta-optimization.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/15-delta-optimization.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/delta-live-tables-thumb.jpg" alt="Delta Live Tables" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Delta Live Tables</div>
+						<div class="video-description">Declarative data pipelines with Delta Live Tables.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/16-delta-live-tables.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/16-delta-live-tables.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html> 

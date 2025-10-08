@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Databricks Video Library - Tim Pomaville</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.video-library {
+			padding: 80px 0;
+			background: #f8f9fa;
+		}
+		.video-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+		.video-card {
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		.video-card:hover {
+			transform: translateY(-5px);
+		}
+		.video-thumbnail {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.video-info {
+			padding: 20px;
+		}
+		.video-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.video-description {
+			color: #666;
+			margin-bottom: 15px;
+			line-height: 1.5;
+		}
+		.video-actions {
+			display: flex;
+			gap: 10px;
+		}
+		.btn-video {
+			padding: 8px 16px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 14px;
+			transition: all 0.3s ease;
+		}
+		.btn-watch {
+			background: #007bff;
+			color: white;
+		}
+		.btn-watch:hover {
+			background: #0056b3;
+			color: white;
+		}
+		.btn-download {
+			background: #28a745;
+			color: white;
+		}
+		.btn-download:hover {
+			background: #1e7e34;
+			color: white;
+		}
+		.back-link {
+			display: inline-block;
+			margin-bottom: 30px;
+			color: #007bff;
+			text-decoration: none;
+		}
+		.back-link:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Tim Pomaville</a>
+			<a href="index.html" class="back-link">
+				<i class="fas fa-arrow-left"></i> Back to Portfolio
+			</a>
+		</div>
+	</nav>
+
+	<div class="video-library">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center mb-4">Databricks Video Library</h1>
+					<p class="text-center mb-5">Master Databricks platform with this comprehensive video series covering workspace, services, and data engineering concepts.</p>
+				</div>
+			</div>
+
+			<div class="video-grid">
+				<div class="video-card">
+					<img src="videos/thumbnails/databricks-intro-thumb.jpg" alt="Databricks Introduction" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Databricks Introduction</div>
+						<div class="video-description">Overview of Databricks platform, workspace, and core services.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/01-databricks-intro.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/01-databricks-intro.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/databricks-workspace-thumb.jpg" alt="Databricks Workspace" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Databricks Workspace</div>
+						<div class="video-description">Navigating the workspace, notebooks, and collaborative features.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/02-databricks-workspace.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/02-databricks-workspace.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/databricks-clusters-thumb.jpg" alt="Databricks Clusters" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Databricks Clusters</div>
+						<div class="video-description">Creating and managing compute clusters for data processing.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/03-databricks-clusters.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/03-databricks-clusters.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/databricks-jobs-thumb.jpg" alt="Databricks Jobs" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Databricks Jobs</div>
+						<div class="video-description">Scheduling and orchestrating data engineering workflows.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/04-databricks-jobs.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/04-databricks-jobs.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/databricks-security-thumb.jpg" alt="Databricks Security" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Databricks Security</div>
+						<div class="video-description">Identity management, access control, and security best practices.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/05-databricks-security.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/05-databricks-security.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="video-card">
+					<img src="videos/thumbnails/databricks-monitoring-thumb.jpg" alt="Databricks Monitoring" class="video-thumbnail">
+					<div class="video-info">
+						<div class="video-title">Databricks Monitoring</div>
+						<div class="video-description">Performance monitoring, logging, and troubleshooting.</div>
+						<div class="video-actions">
+							<a href="videos/data-engineering-diary/06-databricks-monitoring.mp4" target="_blank" class="btn-video btn-watch">
+								<i class="fas fa-play"></i> Watch
+							</a>
+							<a href="videos/data-engineering-diary/06-databricks-monitoring.mp4" download class="btn-video btn-download">
+								<i class="fas fa-download"></i> Download
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html> 

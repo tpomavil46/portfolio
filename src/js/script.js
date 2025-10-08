@@ -11,6 +11,8 @@ $(window).on("load", function() {
 
 $(document).ready(function() {
 
+
+
 	$('#slides').superslides({
 		animation: 'fade',
 		play: 5000,
@@ -165,13 +167,22 @@ $(document).ready(function() {
 	});
 
 
+	// Initialize Isotope with proper layout
 	$(".items").isotope({
 		filter: '*',
+		layoutMode: 'fitRows',
 		animationOptions: {
 			duration: 1500,
 			easing: 'linear',
 			queue: false
 		}
+	});
+	
+	// Force layout update after window load to ensure proper positioning
+	$(window).on('load', function() {
+		setTimeout(function() {
+			$(".items").isotope('layout');
+		}, 200);
 	});
 
 	$("#filters a").click(function() {
@@ -191,6 +202,11 @@ $(document).ready(function() {
 		});
 
 		return false;
+	});
+
+	// Handle window resize to maintain proper layout
+	$(window).on('resize', function() {
+		$(".items").isotope('layout');
 	});
 
 
