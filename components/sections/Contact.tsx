@@ -36,11 +36,11 @@ export default function Contact() {
               architecture roles in industrial or technical environments.
             </p>
             <a
-              href="mailto:timothypomaville@gmail.com"
+              href="mailto:tim@morningstareng.com"
               className="inline-flex items-center gap-2 px-6 py-3 border border-[#58a6ff] text-[#58a6ff] text-sm font-medium rounded hover:bg-[#58a6ff] hover:text-[#0d1117] transition-all duration-200"
             >
               <FaEnvelope className="text-xs" />
-              timothypomaville@gmail.com
+              tim@morningstareng.com
             </a>
           </div>
         </div>
