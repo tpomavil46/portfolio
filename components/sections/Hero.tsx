@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { TypeAnimation } from 'react-type-animation'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const SLIDES = ['/img/slide3.jpg', '/img/slide4.jpg', '/img/slide6.jpg']
@@ -16,6 +15,14 @@ export default function Hero() {
     }, 5000)
     return () => clearInterval(timer)
   }, [])
+
+  function scrollToContact() {
+    const el = document.querySelector('#contact')
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 64
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -39,26 +46,42 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black/55 z-10" />
+      <div className="absolute inset-0 bg-black/60 z-10" />
 
-      <div className="relative z-20 text-center px-4">
-        <p className="text-white text-4xl sm:text-5xl md:text-6xl font-light tracking-[0.25em] mb-5">
-          TIM POMAVILLE
+      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
+        <p className="font-mono text-[#58a6ff] text-xs sm:text-sm tracking-[0.3em] uppercase mb-5">
+          Principal Solutions Architect &amp; Data Engineer
         </p>
-        <TypeAnimation
-          sequence={[
-            'Software Engineer',    2000,
-            'Solution Architect',   2000,
-            'Chemical Engineer',    2000,
-            'DevOps Engineer',      2000,
-            'Data Engineer',        2000,
-          ]}
-          wrapper="p"
-          speed={60}
-          className="text-white/80 text-lg sm:text-xl md:text-2xl font-light tracking-widest font-mono"
-          repeat={Infinity}
-          cursor={false}
-        />
+
+        <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-light tracking-wide mb-7">
+          Timothy Pomaville
+        </h1>
+
+        <p className="text-white/90 text-xl sm:text-2xl font-light max-w-2xl mx-auto mb-4 leading-relaxed">
+          I bridge the plant floor and the data platform.
+        </p>
+
+        <p className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
+          25 years in manufacturing operations across chemicals, automotive, and oil and gas.
+          6 years building data and software infrastructure that works in industrial environments.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          <a
+            href="https://morningstareng.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-3.5 bg-[#58a6ff] text-[#0d1117] text-sm font-semibold tracking-wide rounded hover:bg-[#79b8ff] transition-colors"
+          >
+            Consulting Inquiries
+          </a>
+          <button
+            onClick={scrollToContact}
+            className="px-7 py-3.5 border border-white/50 text-white text-sm font-medium tracking-wide rounded hover:border-white hover:bg-white/10 transition-colors"
+          >
+            Available for Hire
+          </button>
+        </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
