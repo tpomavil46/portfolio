@@ -6,7 +6,7 @@ const PLATFORMS = [
     icon: <FaThLarge className="text-[#58a6ff]" />,
     title: 'Platform Console',
     description:
-      'Internal developer portal for the Morning Star Engineering data platform. Single sign-on via Keycloak, embedded Grafana dashboards, and direct links to every platform tool — giving engineers one place to start their day.',
+      'Internal developer portal for the Morning Star Engineering data platform. Single sign-on via Keycloak, embedded Grafana dashboards, and direct links to every platform tool, giving engineers one place to start their day.',
     href: 'https://platform-console.morningstareng.com/',
     linkLabel: 'platform-console.morningstareng.com',
     tech: ['Next.js', 'Keycloak SSO', 'Kubernetes', 'ArgoCD', 'Vault', 'Grafana Embed'],

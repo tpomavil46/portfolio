@@ -17,7 +17,7 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Tim Pomaville | Platform & Data Engineer',
   description:
-    'Tim Pomaville — Platform & Data Engineer specializing in manufacturing-adjacent data systems, Kubernetes-native data platforms, and AI/ML infrastructure.',
+    'Tim Pomaville, Platform & Data Engineer specializing in manufacturing-adjacent data systems, Kubernetes-native data platforms, and AI/ML infrastructure.',
   openGraph: {
     title: 'Tim Pomaville | Platform & Data Engineer',
     description:

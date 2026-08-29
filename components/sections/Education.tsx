@@ -28,6 +28,11 @@ const CERTS = [
     date: 'Expected: 2026',
     statusLabel: 'In Progress',
     statusType: 'in-progress' as const,
+    currentGpa: '4.0',
+    coursework: [
+      { name: 'Artificial Intelligence', result: 'A+' },
+      { name: 'Applied Machine Learning', result: 'In Progress' },
+    ],
   },
   {
     icon: <FaDatabase />,

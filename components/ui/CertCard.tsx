@@ -10,6 +10,8 @@ interface CertCardProps {
   statusType: 'completed' | 'in-progress'
   pdfHref?: string
   pdfLabel?: string
+  currentGpa?: string
+  coursework?: { name: string; result: string }[]
 }
 
 export function CertCard({
@@ -21,6 +23,8 @@ export function CertCard({
   statusType,
   pdfHref,
   pdfLabel,
+  currentGpa,
+  coursework,
 }: CertCardProps) {
   const statusColor =
     statusType === 'completed' ? 'text-accent-green' : 'text-accent-yellow'
@@ -42,6 +46,28 @@ export function CertCard({
       <p className={`text-xs font-semibold uppercase tracking-wide mb-3 ${statusColor}`}>
         {statusLabel}
       </p>
+      {currentGpa && (
+        <p className="text-[#c9d1d9] text-xs font-semibold mb-3">
+          Current GPA: {currentGpa}
+        </p>
+      )}
+      {coursework && coursework.length > 0 && (
+        <div className="mt-4 pt-4 border-t border-[#30363d] text-left">
+          <p className="text-[#8b949e] text-[11px] font-semibold uppercase tracking-wide mb-2">
+            Selected Coursework
+          </p>
+          <ul className="space-y-2">
+            {coursework.map((course) => (
+              <li key={course.name} className="flex items-start justify-between gap-3 text-xs">
+                <span className="text-[#8b949e]">{course.name}</span>
+                <span className="text-[#e6edf3] font-semibold text-right shrink-0">
+                  {course.result}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {pdfHref && pdfLabel && (
         <a
           href={pdfHref}

@@ -43,6 +43,12 @@ export default function About() {
           </div>
 
           <div className="md:w-3/5">
+            <p className="text-[#c9d1d9] text-sm leading-relaxed mb-4 border-l-2 border-[#58a6ff]/50 pl-4">
+              I&apos;m currently pursuing graduate computer science studies at the University of
+              Illinois Urbana-Champaign with a 4.0 GPA. I completed Artificial Intelligence with
+              an A+ and am currently studying Applied Machine Learning.
+            </p>
+
             <p className="text-[#8b949e] text-sm leading-relaxed mb-4">
               I&apos;m a multidisciplinary engineer with roots in Chemical Engineering and a career
               that&apos;s run through automotive, chemical, and aerospace manufacturing. That
