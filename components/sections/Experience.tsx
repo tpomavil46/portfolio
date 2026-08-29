@@ -2,10 +2,10 @@ import { StatCounter } from '@/components/ui/StatCounter'
 import { FaFlask, FaCode, FaCodeBranch, FaCubes } from 'react-icons/fa'
 
 const STATS = [
-  { value: 25, label: 'Years Manufacturing Operations Experience', icon: <FaFlask /> },
-  { value: 6,  label: 'Years Data Engineering Experience',         icon: <FaCodeBranch /> },
-  { value: 6,  label: 'Years Software Engineering Experience',     icon: <FaCode /> },
-  { value: 5,  label: 'Years Platform Engineering Experience',     icon: <FaCubes /> },
+  { value: 27, label: 'Years Manufacturing Operations Experience', icon: <FaFlask /> },
+  { value: 7,  label: 'Years Data Engineering Experience',         icon: <FaCodeBranch /> },
+  { value: 7,  label: 'Years Software Engineering Experience',     icon: <FaCode /> },
+  { value: 6,  label: 'Years Platform Engineering Experience',     icon: <FaCubes /> },
 ]
 
 export default function Experience() {

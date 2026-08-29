@@ -62,8 +62,8 @@ export default function Hero() {
         </p>
 
         <p className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
-          25 years in manufacturing operations across chemicals, automotive, and oil and gas.
-          6 years building data and software infrastructure that works in industrial environments.
+          27 years in manufacturing operations across chemicals, automotive, and oil and gas.
+          7 years building data and software infrastructure that works in industrial environments.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
