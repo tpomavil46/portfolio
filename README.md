@@ -1,5 +1,10 @@
 # portfolio
 
+## Node.js version
+
+Use Node.js 24 for local development and builds. `.nvmrc` selects this major
+version for compatible version managers, and `engines.node` in `package.json`
+selects it for new Vercel deployments. Vercel manages minor and patch updates.
 
 
 ## Getting started
