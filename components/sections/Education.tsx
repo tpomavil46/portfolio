@@ -25,13 +25,14 @@ const CERTS = [
     icon: <FaTerminal />,
     title: 'MCS, Computer Science -- Artificial Intelligence Track',
     institution: 'University of Illinois Urbana-Champaign',
-    date: 'Expected: 2026',
-    statusLabel: 'In Progress',
+    date: 'Expected: 2028',
+    statusLabel: 'GPA 4.0 / 4.0',
     statusType: 'in-progress' as const,
     currentGpa: '4.0',
     coursework: [
       { name: 'Artificial Intelligence', result: 'A+' },
-      { name: 'Applied Machine Learning', result: 'In Progress' },
+      { name: 'Applied Machine Learning', result: 'A' },
+      { name: 'Deep Learning for Healthcare', result: 'Spring `27' },
     ],
   },
   {
