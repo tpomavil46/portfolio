@@ -30,9 +30,14 @@ const CERTS = [
     statusType: 'in-progress' as const,
     currentGpa: '4.0',
     coursework: [
-      { name: 'Artificial Intelligence', result: 'A+' },
-      { name: 'Applied Machine Learning', result: 'A' },
-      { name: 'Deep Learning for Healthcare', result: 'Spring `27' },
+      { name: 'CS 440 Artificial Intelligence', result: 'A+' },
+      { name: 'CS 441 Applied Machine Learning', result: 'A' },
+      { name: 'CS 598 Deep Learning for Healthcare', result: 'Spring `27' },
+      { name: 'CS 411 Databases', result: 'Summer `27' },
+      { name: 'CS 425 Distributed Systems', result: 'Fall `27' },
+      { name: 'CS 498 Cloud Computing Apps', result: 'Spring `28' },
+      { name: 'CS 598 Cloud Capstone', result: 'Summer `28' },
+      { name: 'CS 513 Data Cleaning', result: 'Fall `28' },
     ],
   },
   {
