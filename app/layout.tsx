@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
+import { siteUrl } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({
@@ -15,6 +16,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Tim Pomaville | Platform & Data Engineer',
   description:
     'Tim Pomaville, Platform & Data Engineer specializing in manufacturing-adjacent data systems, Kubernetes-native data platforms, and AI/ML infrastructure.',
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
     title: 'Tim Pomaville | Platform & Data Engineer',
     description:
       'Platform & Data Engineer with a chemical engineering background, building Kubernetes-native data platforms for manufacturing and industrial operations.',
+    url: '/',
     type: 'website',
   },
 }
