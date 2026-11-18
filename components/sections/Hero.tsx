@@ -68,7 +68,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="https://morningstareng.com"
+            href="https://www.morningstareng.com"
             target="_blank"
             rel="noopener noreferrer"
             className="px-7 py-3.5 bg-[#58a6ff] text-[#0d1117] text-sm font-semibold tracking-wide rounded hover:bg-[#79b8ff] transition-colors"

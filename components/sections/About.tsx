@@ -30,7 +30,7 @@ export default function About() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://morningstareng.com"
+                  href="https://www.morningstareng.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs text-[#8b949e] hover:text-[#58a6ff] transition-colors"

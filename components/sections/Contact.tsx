@@ -19,7 +19,7 @@ export default function Contact() {
               manufacturing analytics through Morning Star Engineering.
             </p>
             <a
-              href="https://morningstareng.com/contact"
+              href="https://www.morningstareng.com/contact"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#58a6ff] text-[#0d1117] text-sm font-semibold rounded hover:bg-[#79b8ff] transition-colors"

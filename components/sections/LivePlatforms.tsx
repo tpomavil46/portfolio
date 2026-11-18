@@ -15,7 +15,7 @@ const PLATFORMS = [
     icon: <FaGlobe className="text-[#58a6ff]" />,
     title: 'morningstareng.com',
     description: 'Morning Star Engineering company website.',
-    href: 'https://morningstareng.com/',
+    href: 'https://www.morningstareng.com/',
     linkLabel: 'morningstareng.com',
     tech: [],
   },
